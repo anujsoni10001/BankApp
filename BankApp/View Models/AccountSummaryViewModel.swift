@@ -23,7 +23,9 @@ private var _accountsModel :[Account] = [Account]()
             case .success(let accounts):
                 if let accounts = accounts{
                 self._accountsModel = accounts
-                self.accounts = accounts.map(AccountViewModel.init)
+                    DispatchQueue.main.async {
+                        self.accounts = accounts.map(AccountViewModel.init)
+                    }
                 }
             case .failure(let error):
                 print(error.localizedDescription)
@@ -57,6 +59,8 @@ class AccountViewModel {
         account.balance
     }
 }
+
+
 
 
 

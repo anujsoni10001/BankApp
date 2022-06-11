@@ -11,6 +11,8 @@ struct AccountSummaryScreen: View {
     
     @ObservedObject private var accountSummaryVM:AccountSummaryViewModel = AccountSummaryViewModel()
     
+    @State private var isPresented : Bool = false
+    
     var body: some View {
         
         VStack
@@ -30,6 +32,18 @@ struct AccountSummaryScreen: View {
         .onAppear(){
             self.accountSummaryVM.getAllAccounts()
         }
+        .sheet(isPresented: $isPresented){
+            self.accountSummaryVM.getAllAccounts()
+        } content :{
+            AddAccountScreen()
+        }
+//        .sheet(isPresented:$isPresented){
+//        //             AddEmployeeView().environment(\.managedObjectContext,self.managedObjectContext)
+//            AddAccountScreen()
+//        }
+        .navigationBarItems(trailing:Button("Add Account"){
+            self.isPresented.toggle()
+        })
         .navigationBarTitle("Accounts Summary")
         .embedInNavigationView()
     }
@@ -40,4 +54,6 @@ struct AccountSummaryScreen_Previews: PreviewProvider {
         AccountSummaryScreen()
     }
 }
+
+
 
