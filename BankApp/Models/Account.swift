@@ -25,9 +25,10 @@ var title : String {
 struct Account : Codable{
 var id:UUID
 var name:String
-let accountType : AccountType
+let accountType :AccountType
 var balance :Double
 }
+
 
 
 

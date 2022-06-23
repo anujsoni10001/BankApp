@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B19147C285C3352001B6132 /* TransferFundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19147B285C3352001B6132 /* TransferFundsViewModel.swift */; };
+		4B19147E285C3437001B6132 /* TransferFundsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19147D285C3437001B6132 /* TransferFundsScreen.swift */; };
 		4B2994142852F89500986C09 /* AddAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2994132852F89500986C09 /* AddAccountViewModel.swift */; };
 		4B37CE942853429D00CE7D67 /* AddAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B37CE932853429D00CE7D67 /* AddAccountScreen.swift */; };
 		4B537F092848711200A8D82B /* BankAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B537F082848711200A8D82B /* BankAppApp.swift */; };
@@ -21,11 +23,14 @@
 		4B537F3C2848728E00A8D82B /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B537F392848728E00A8D82B /* URL+Extensions.swift */; };
 		4B59BB42285075C200EF10E7 /* CreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B59BB41285075C200EF10E7 /* CreateAccountRequest.swift */; };
 		4B59BB4428507B5200EF10E7 /* CreateAccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B59BB4328507B5200EF10E7 /* CreateAccountResponse.swift */; };
+		4B5A3F65285BEEA800AC933E /* TransferFundRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A3F64285BEEA800AC933E /* TransferFundRequest.swift */; };
+		4B5A3F67285BF15100AC933E /* TransferFundResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A3F66285BF15100AC933E /* TransferFundResponse.swift */; };
 		4B5EDDF82849E74800FDCF0C /* AccountSummaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EDDF72849E74800FDCF0C /* AccountSummaryScreen.swift */; };
 		4B5EDDFA2849EBA000FDCF0C /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EDDF92849EBA000FDCF0C /* AccountListView.swift */; };
 		4B60AEF92848A1E60002F8F1 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B60AEF82848A1E60002F8F1 /* Account.swift */; };
 		4B60AEFB2848A9490002F8F1 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B60AEFA2848A9490002F8F1 /* AccountService.swift */; };
 		4B9CA18D2849BD7500BA67F5 /* AccountSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9CA18C2849BD7500BA67F5 /* AccountSummaryViewModel.swift */; };
+		4BC446972861A90D00FCB08D /* TransferFundsAccountSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC446962861A90D00FCB08D /* TransferFundsAccountSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B19147B285C3352001B6132 /* TransferFundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFundsViewModel.swift; sourceTree = "<group>"; };
+		4B19147D285C3437001B6132 /* TransferFundsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFundsScreen.swift; sourceTree = "<group>"; };
 		4B2994132852F89500986C09 /* AddAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewModel.swift; sourceTree = "<group>"; };
 		4B37CE932853429D00CE7D67 /* AddAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountScreen.swift; sourceTree = "<group>"; };
 		4B537F052848711200A8D82B /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,11 +70,14 @@
 		4B537F392848728E00A8D82B /* URL+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		4B59BB41285075C200EF10E7 /* CreateAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRequest.swift; sourceTree = "<group>"; };
 		4B59BB4328507B5200EF10E7 /* CreateAccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountResponse.swift; sourceTree = "<group>"; };
+		4B5A3F64285BEEA800AC933E /* TransferFundRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFundRequest.swift; sourceTree = "<group>"; };
+		4B5A3F66285BF15100AC933E /* TransferFundResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFundResponse.swift; sourceTree = "<group>"; };
 		4B5EDDF72849E74800FDCF0C /* AccountSummaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryScreen.swift; sourceTree = "<group>"; };
 		4B5EDDF92849EBA000FDCF0C /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
 		4B60AEF82848A1E60002F8F1 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		4B60AEFA2848A9490002F8F1 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		4B9CA18C2849BD7500BA67F5 /* AccountSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewModel.swift; sourceTree = "<group>"; };
+		4BC446962861A90D00FCB08D /* TransferFundsAccountSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFundsAccountSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +172,7 @@
 			children = (
 				4B5EDDF72849E74800FDCF0C /* AccountSummaryScreen.swift */,
 				4B37CE932853429D00CE7D67 /* AddAccountScreen.swift */,
+				4B19147D285C3437001B6132 /* TransferFundsScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 			children = (
 				4B9CA18C2849BD7500BA67F5 /* AccountSummaryViewModel.swift */,
 				4B2994132852F89500986C09 /* AddAccountViewModel.swift */,
+				4B19147B285C3352001B6132 /* TransferFundsViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -187,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				4B5EDDF92849EBA000FDCF0C /* AccountListView.swift */,
+				4BC446962861A90D00FCB08D /* TransferFundsAccountSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +220,8 @@
 				4B60AEF82848A1E60002F8F1 /* Account.swift */,
 				4B59BB41285075C200EF10E7 /* CreateAccountRequest.swift */,
 				4B59BB4328507B5200EF10E7 /* CreateAccountResponse.swift */,
+				4B5A3F64285BEEA800AC933E /* TransferFundRequest.swift */,
+				4B5A3F66285BF15100AC933E /* TransferFundResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,20 +356,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B19147C285C3352001B6132 /* TransferFundsViewModel.swift in Sources */,
 				4B5EDDF82849E74800FDCF0C /* AccountSummaryScreen.swift in Sources */,
 				4B537F3B2848728E00A8D82B /* Double+Extensions.swift in Sources */,
 				4B537F0B2848711200A8D82B /* ContentView.swift in Sources */,
 				4B2994142852F89500986C09 /* AddAccountViewModel.swift in Sources */,
 				4B537F3C2848728E00A8D82B /* URL+Extensions.swift in Sources */,
 				4B5EDDFA2849EBA000FDCF0C /* AccountListView.swift in Sources */,
+				4B5A3F67285BF15100AC933E /* TransferFundResponse.swift in Sources */,
 				4B537F3A2848728E00A8D82B /* View+Extensions.swift in Sources */,
 				4B59BB4428507B5200EF10E7 /* CreateAccountResponse.swift in Sources */,
 				4B60AEFB2848A9490002F8F1 /* AccountService.swift in Sources */,
 				4B37CE942853429D00CE7D67 /* AddAccountScreen.swift in Sources */,
 				4B537F092848711200A8D82B /* BankAppApp.swift in Sources */,
 				4B59BB42285075C200EF10E7 /* CreateAccountRequest.swift in Sources */,
+				4BC446972861A90D00FCB08D /* TransferFundsAccountSelectionView.swift in Sources */,
 				4B60AEF92848A1E60002F8F1 /* Account.swift in Sources */,
 				4B9CA18D2849BD7500BA67F5 /* AccountSummaryViewModel.swift in Sources */,
+				4B5A3F65285BEEA800AC933E /* TransferFundRequest.swift in Sources */,
+				4B19147E285C3437001B6132 /* TransferFundsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

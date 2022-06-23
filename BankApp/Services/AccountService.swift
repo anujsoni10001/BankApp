@@ -4,10 +4,9 @@
 //
 //  Created by Anuj Soni on 02/06/22.
 //
-
 import Foundation
 
-enum NetworkError:Error{
+enum LocalError:Error{
 case badURL
 case noData
 case decodingError
@@ -20,7 +19,7 @@ private init(){}
     
 static let shared = AccountService()
     
-func createAccount(createAccountRequest:CreateAccountRequest,completion:@escaping (Result<CreateAccountResponse,NetworkError>) -> Void){
+func createAccount(createAccountRequest:CreateAccountRequest,completion:@escaping (Result<CreateAccountResponse,LocalError>) -> Void){
     
     //Create a url for http request else badURL
     guard let url = URL.urlForCreateAccounts() else{
@@ -48,7 +47,7 @@ func createAccount(createAccountRequest:CreateAccountRequest,completion:@escapin
     
 }
 
-func getAllAccounts(completion:@escaping (Result<[Account]?,NetworkError>)->Void){
+func getAllAccounts(completion:@escaping (Result<[Account]?,LocalError>)->Void){
     
     //Create a url for http request else badURL
     guard let url = URL.urlForAccounts() else {
@@ -66,6 +65,7 @@ func getAllAccounts(completion:@escaping (Result<[Account]?,NetworkError>)->Void
     //Decoding Succesfull else decodingError
     //Converting JSON data to Model Data
     guard let accounts = try? JSONDecoder().decode([Account].self, from: data) else {
+        print("1")
     return completion(.failure(.decodingError))
     }
     
@@ -73,5 +73,36 @@ func getAllAccounts(completion:@escaping (Result<[Account]?,NetworkError>)->Void
     
     }.resume()
 }
+    
+    func transferFunds(transferFundRequest: TransferFundRequest,completion:@escaping (Result<TransferFundResponse,LocalError>) -> Void){
+        
+        //Create a url for http request else badURL
+        guard let url = URL.urlForTransferFunds() else{
+            return completion(.failure(.badURL))
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONEncoder().encode(transferFundRequest)
+        
+        URLSession.shared.dataTask(with:request){data,response,error in
+            
+        //Data Extracted Succesfully else noData
+        guard let data = data , error == nil else {
+        return completion(.failure(.noData))
+        }
+        
+        guard let transferfundresponse = try? JSONDecoder().decode(TransferFundResponse.self, from: data) else {
+            return completion(.failure(.decodingError))
+        }
+            
+        return completion(.success(transferfundresponse))
+            
+        }.resume()
+    }
 }
+
+
+
 

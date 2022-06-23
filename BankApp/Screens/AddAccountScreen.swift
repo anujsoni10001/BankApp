@@ -9,11 +9,11 @@ import SwiftUI
 
 struct AddAccountScreen: View {
     
-    @Environment(\.presentationMode) var presentationMode
-    @ObservedObject private var addAccountVM = AddAccountViewModel()
+@Environment(\.presentationMode) var presentationMode
+@ObservedObject private var addAccountVM = AddAccountViewModel()
     
     
-    var body: some View {
+var body: some View {
         Form{
         
         TextField("Name", text:$addAccountVM.name)

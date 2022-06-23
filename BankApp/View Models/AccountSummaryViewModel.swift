@@ -4,7 +4,6 @@
 //
 //  Created by Anuj Soni on 03/06/22.
 //
-
 import Foundation
 
 class AccountSummaryViewModel:ObservableObject{
@@ -28,7 +27,8 @@ private var _accountsModel :[Account] = [Account]()
                     }
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+             print(error.localizedDescription)
+             print(error)
             }
         }
     }
